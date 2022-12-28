@@ -18,6 +18,17 @@ builder.Services.AddDbContext<BookStoreDBContext>(o =>
 });
 builder.Services.AddScoped<IBookRepository,BookRepository>();
 builder.Services.AddScoped<IBookStoreService,BookStoreService>();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo 
+    { Title ="Swagger API",
+      Version = "v1",
+      Description = "BookStore API"
+    });
+    c.IncludeXmlComments(Path.Combine("BookStoreSwagger.xml"));
+}
+
+);
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

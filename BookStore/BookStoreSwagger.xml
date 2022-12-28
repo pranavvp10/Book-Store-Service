@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStore</name>
+    </assembly>
+    <members>
+        <member name="M:BookStore.Controllers.BookStoreController.AddBook(BookStore.Core.Entities.Book)">
+            <summary>
+            API endpoint for adding a book to list
+            </summary>
+            <param name="book">An object of book consisting Id, Name and Author Name.</param>
+        </member>
+        <member name="M:BookStore.Controllers.BookStoreController.GetAllBooks">
+            <summary>
+            API endpoint to get details of all books.
+            </summary>
+            <returns> A List of Book Details</returns>
+        </member>
+        <member name="M:BookStore.Controllers.BookStoreController.GetBook(System.String)">
+            <summary>
+            API endpoint to fetch details of a particular book by its Id.
+            </summary>
+            <param name="id">Id of the book to fetch</param>
+            <returns>A book object</returns>
+        </member>
+    </members>
+</doc>
