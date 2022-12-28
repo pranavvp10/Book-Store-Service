@@ -1,11 +1,6 @@
 ﻿using BookStore.Core.Contexts;
 using BookStore.Core.Entities;
 using BookStore.Core.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookStore.Core.Repositories
 {

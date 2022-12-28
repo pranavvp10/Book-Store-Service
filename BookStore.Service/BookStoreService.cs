@@ -29,7 +29,7 @@ namespace BookStore.Service
             List<Book> books = new List<Book>();
             try
             {
-                books= _repository.GetAllBooks();
+                books = _repository.GetAllBooks();
             }
             catch (Exception exception)
             {

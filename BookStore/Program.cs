@@ -16,14 +16,15 @@ builder.Services.AddDbContext<BookStoreDBContext>(o =>
 {
     o.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreConnectionString"));
 });
-builder.Services.AddScoped<IBookRepository,BookRepository>();
-builder.Services.AddScoped<IBookStoreService,BookStoreService>();
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IBookStoreService, BookStoreService>();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo 
-    { Title ="Swagger API",
-      Version = "v1",
-      Description = "BookStore API"
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Swagger API",
+        Version = "v1",
+        Description = "BookStore API"
     });
     c.IncludeXmlComments(Path.Combine("BookStoreSwagger.xml"));
 }
